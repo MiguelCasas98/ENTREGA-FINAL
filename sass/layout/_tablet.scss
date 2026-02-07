@@ -1,0 +1,19 @@
+/* tablet */
+@media(min-width: 481px) and (max-width: 768px){
+    .grid{
+        grid-template-columns: 1fr 1fr 1fr ;
+        grid-template-areas: 
+        "header header header "
+        "aside aside aside "
+        "main main main "
+        "footer footer footer ";
+        text-align: center;
+    
+    footer .location_icon { 
+        gap: 0px;
+         li { 
+            flex: 1 1 45%; // dos columnas 
+         }
+        }
+    }
+}

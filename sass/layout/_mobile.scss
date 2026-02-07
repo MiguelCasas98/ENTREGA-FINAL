@@ -1,0 +1,14 @@
+/*nq mobile*/
+@media (max-width: 480px) {
+.grid{
+    display: grid;
+    height: 100vh;
+    gap: 20px;
+    grid-template-areas: 
+        "header "
+        "main "
+        "aside "
+        "footer ";
+    }
+    
+         footer .location_icon { flex-direction: column; align-items: fle; gap: 10px; } footer .location_icon li img { width: 20px; } footer .location_icon li { font-size: 12px; } }

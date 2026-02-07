@@ -1,0 +1,12 @@
+//reset
+@use "base/reset" as*;
+
+//home
+@use "pages/home" as *;
+//mobile
+@use "layout/mobile" as *;
+//tablet
+@use "layout/tablet" as *;
+//desktop
+@use "layout/desktop" as *;
+

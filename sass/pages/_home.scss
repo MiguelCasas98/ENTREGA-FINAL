@@ -1,0 +1,117 @@
+//variables
+@use "../utilities/variables" as *;
+
+//mixin
+@use "../utilities/mixin" as *;
+
+
+html, body { height: 100%; }// que ocupe toda la ventana margin: 0;
+         body { display: flex; 
+                flex-direction: column; }
+/*estilos de header*/
+
+header{
+    img { display: block; 
+        margin: 0 auto; } 
+    main{
+    text-align: $align;
+    nav{        
+        ul{
+          list-style: none;
+          li{
+            a{
+         text-decoration: none;
+         color:rgb(86, 30, 210);   
+        }
+      }  
+     }
+    }
+    img{
+    width: 20%;
+    margin: 25px 0 100px 0;
+    }
+} 
+}
+/* estilos de main*/
+main{
+    @include flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: $color-principal;
+    text-align:$align;
+    flex: 1;
+    nav{
+        ul{
+            li{
+                p{
+                    text-decoration:$decoration;
+                    color:$color-secundario
+                }
+            }
+            a{
+                text-decoration: $decoration;
+                color:$color-principal;
+                font-weight: bold;
+            }
+        }
+    }
+    div{p
+    {
+    color:$color-tipo;
+    text-align:$align;
+        }
+      } 
+}
+nav{ul{li{a:hover{
+      color:whitesmoke;
+      }
+     }
+    }
+   }
+   /*estilos de main en productos*/
+main{
+    @include flex;
+    flex-direction: column; /* apila vertical*/
+    gap: 10px; /* espacio entre ítems */ 
+    list-style: none; 
+    padding: 0;
+}
+/*estilos de footer*/
+footer{
+    background-color:lightseagreen;
+    color:$color-secundario;
+    text-align: $align;
+    margin-top: auto;
+
+    .location_icon { 
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center; 
+        align-items: center; 
+        gap: 25px; 
+        list-style: none; 
+        padding: 0; 
+        margin: 0; 
+        li { 
+            display: flex; 
+            flex-direction: column; // icono arriba, texto abajo 
+        align-items: center; font-size: 14px; img { width: 30px; height: auto; margin-bottom: 5px; } } } }
+    
+    
+    a{
+        color:$color-principal;
+        text-decoration: $decoration;
+        text-align: $align;
+    }
+    hover{
+        color: whitesmoke;
+    }
+
+/*cass*/
+header{
+    h1{
+    background-color:lightseagreen;
+    color:$color-secundario;
+    text-align: $align;
+    }
+}
