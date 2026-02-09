@@ -30,6 +30,40 @@ body {
   flex-direction: column;
 }
 
+.img-frame {
+  border: 8px solid #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  background-color: #e7dede;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-frame:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.img-frame--banner {
+  border: 8px solid #fff;
+  padding: 10px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #f9f9f9, #e0e0e0);
+  transition: background 3s ease;
+  animation: bannerColor 8s infinite alternate;
+}
+
+@keyframes bannerColor {
+  0% {
+    background: linear-gradient(90deg, #67dfcb, #e0e0e0);
+  }
+  50% {
+    background: linear-gradient(90deg, #67dfcb, #f9f9f9);
+  }
+  100% {
+    background: linear-gradient(90deg, #e0f7fa, #67dfcb);
+  }
+}
 /*estilos de header*/
 header img {
   display: block;
@@ -74,8 +108,14 @@ main div p {
   text-align: center;
 }
 
+nav ul li a {
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 nav ul li a:hover {
   color: whitesmoke;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px black;
 }
 
 /*estilos de main en productos*/
@@ -94,6 +134,15 @@ footer {
   color: black;
   text-align: center;
   margin-top: auto;
+}
+footer a {
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+footer a:hover {
+  color: whitesmoke;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px black;
 }
 footer .location_icon {
   display: flex;
@@ -115,6 +164,14 @@ footer .location_icon li img {
   width: 30px;
   height: auto;
   margin-bottom: 5px;
+}
+footer .location_icon li a {
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+footer .location_icon li a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px black;
 }
 
 a {

@@ -8,6 +8,31 @@
 html, body { height: 100%; }// que ocupe toda la ventana margin: 0;
          body { display: flex; 
                 flex-direction: column; }
+
+.img-frame {
+  border: 8px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  padding: 10px;
+  background-color: #e7dede;
+  border-radius: 6px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.img-frame:hover { 
+    transform: scale(1.15); // agranda un poco la imagen 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3); // sombra más intensa 
+    }
+.img-frame--banner { 
+    border: 8px solid #fff; 
+    padding: 10px; 
+    border-radius: 6px; 
+    background: linear-gradient(90deg, #f9f9f9, #e0e0e0); 
+    transition: background 3s ease; // transición suave 
+    animation: bannerColor 8s infinite alternate; // animación continua 
+    } @keyframes bannerColor { 
+        0% { background: linear-gradient(90deg, #67dfcb, #e0e0e0); } 
+        50% { background: linear-gradient(90deg, #67dfcb, #f9f9f9); } 
+        100% { background: linear-gradient(90deg, #e0f7fa, #67dfcb); }
+    }
 /*estilos de header*/
 
 header{
@@ -32,6 +57,8 @@ header{
     }
 } 
 }
+
+
 /* estilos de main*/
 main{
     @include flex;
@@ -40,6 +67,7 @@ main{
     color: $color-principal;
     text-align:$align;
     flex: 1;
+    
     nav{
         ul{
             li{
@@ -62,8 +90,16 @@ main{
         }
       } 
 }
-nav{ul{li{a:hover{
+nav{ul{li{
+    
+    a {
+    display: inline-block; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; } 
+    
+    a:hover{
       color:whitesmoke;
+      transform: scale(1.1); // agranda el botón 
+      box-shadow: 0 4px 12px black; // sombra para dar efecto de “flotar” 
       }
      }
     }
@@ -83,6 +119,16 @@ footer{
     text-align: $align;
     margin-top: auto;
 
+    a {
+    display: inline-block; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; } 
+        a:hover { 
+          color:whitesmoke;
+          transform: scale(1.1); // agranda el botón 
+          box-shadow: 0 4px 12px black; // sombra para dar efecto de “flotar” 
+        }
+
+    
     .location_icon { 
         display: flex;
         flex-wrap: wrap; 
@@ -95,8 +141,24 @@ footer{
         li { 
             display: flex; 
             flex-direction: column; // icono arriba, texto abajo 
-        align-items: center; font-size: 14px; img { width: 30px; height: auto; margin-bottom: 5px; } } } }
-    
+            align-items: center;
+             font-size: 14px;
+              img { 
+                width: 30px;
+                height: auto; 
+                margin-bottom: 5px; 
+               } 
+                a { 
+                    display: inline-block; 
+                    transition: transform 0.3s ease, box-shadow 0.3s ease; } 
+                    a:hover { 
+                        transform: scale(1.1); // agranda el botón 
+                        box-shadow: 0 4px 12px black; // sombra para dar efecto de “flotar” 
+                        }
+            } 
+        } 
+    }
+        
     
     a{
         color:$color-principal;
