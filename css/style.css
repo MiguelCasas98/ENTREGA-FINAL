@@ -195,13 +195,13 @@ header h1 {
 @media (max-width: 480px) {
   .grid {
     display: grid;
-    height: 100vh;
+    min-height: 100vh;
     gap: 20px;
     grid-template-areas: "header " "main " "aside " "footer ";
   }
   footer .location_icon {
     flex-direction: column;
-    align-items: fle;
+    align-items: center;
     gap: 10px;
   }
   footer .location_icon li img {
